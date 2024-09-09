@@ -1,0 +1,80 @@
+@charset "utf-8";
+
+*{margin: 0; padding: 0;}
+ul{list-style: none;}
+a{text-decoration: none;}
+@font-face {
+  font-family: MaruBuri-EL;
+  src: url(../webfonts/MaruBuri-ExtraLight.otf) format("opentype");
+}
+@font-face {
+  font-family: MaruBuri-L;
+  src: url(../webfonts/MaruBuri-Light.otf) format("opentype");
+}
+
+/* header 시작 */
+#header{
+  font-family: MaruBuri-EL;
+  display: flex; flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto; box-sizing: border-box;
+  height: 50px; width: 100%;
+  background: transparent;
+  position: fixed;
+  z-index:9;
+  text-align:center;
+  padding: 20px 30px 0; box-sizing: border-box;
+  top:0px;
+}
+#header a{color: #fff;}
+#header .logo img{width:92%; min-width: 80px; vertical-align: middle;}
+#header ul{display: flex;}
+#header ul.nav li a{margin: 0 60px;}
+#header ul.r_menu li a{margin: 0 20px;}
+
+
+/* section0 시작 */
+#section0 .slide{
+  position: relative;
+}
+#section0 .slide .intro img{
+  position: absolute;
+  left: 0; top: 0;
+}
+#section0 .slide .intro img:nth-child(1),
+#section0 .slide .intro img:nth-child(2){
+  width: 100%; height: 100%; object-fit: cover;
+}
+#section0 .slide .intro img:nth-child(3){
+  width: 35%;
+  left: 50%; top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+/* section1 시작 */
+#section1{
+  font-family: MaruBuri-L; text-align: center;
+  background-image: url(../images/section2_bg_texture.jpg);
+  overflow: hidden;
+}
+.fp-scroller{height: 100vh;}
+#section1 .s1{
+  background-color: rgba(255, 255, 255, .45);
+  display: flex; justify-content: center; gap: 10%;
+  align-items: center;
+  height: 100%; width: 100%;
+}
+#section1 .s1 .left img{width: 45%; margin-bottom: 10px;}
+#section1 .s1 .left p{line-height: 35px; color: #333;}
+#section1 .s1 .right{width: 45%;}
+#section1 .s1 .right img{width: 100%; position: relative;}
+#section1 .s1 .right img::after{
+  content: "";
+  background-image: url(../images/section2_mainimg_circle_word.png);
+  width: 100%; height: 100%;
+  position: absolute; left: 0; top: 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
