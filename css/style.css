@@ -11,6 +11,10 @@ a{text-decoration: none;}
   font-family: MaruBuri-L;
   src: url(../webfonts/MaruBuri-Light.otf) format("opentype");
 }
+@font-face {
+  font-family: Delicate;
+  src: url(../webfonts/Delicate\ Caligraphy\ Demo.woff) format("woff");
+}
 
 /* header 시작 */
 #header{
@@ -20,12 +24,12 @@ a{text-decoration: none;}
   align-items: center;
   margin: 0 auto; box-sizing: border-box;
   height: 50px; width: 100%;
-  background: transparent;
   position: fixed;
   z-index:9;
   text-align:center;
   padding: 20px 30px 0; box-sizing: border-box;
   top:0px;
+  background-image: linear-gradient(rgba(0, 0, 0, .3),rgba(0, 0, 0, .1),transparent);
 }
 #header a{color: #fff;}
 #header .logo img{width:92%; min-width: 80px; vertical-align: middle;}
@@ -47,7 +51,7 @@ a{text-decoration: none;}
   width: 100%; height: 100%; object-fit: cover;
 }
 #section0 .slide .intro img:nth-child(3){
-  width: 35%;
+  width: 25%; min-width: 250px;
   left: 50%; top: 50%;
   transform: translate(-50%, -50%);
 }
@@ -56,26 +60,85 @@ a{text-decoration: none;}
 /* section1 시작 */
 #section1{
   font-family: MaruBuri-L; text-align: center;
-  background-image: url(../images/section2_bg_texture.jpg);
+  background-image: url(../images/section2_bg_texture_2.jpg);
   overflow: hidden;
 }
 .fp-scroller{height: 100vh;}
 #section1 .s1{
-  background-color: rgba(255, 255, 255, .45);
+  /* background-color: rgba(255, 255, 255, .45); */
   display: flex; justify-content: center; gap: 10%;
   align-items: center;
   height: 100%; width: 100%;
 }
 #section1 .s1 .left img{width: 45%; margin-bottom: 10px;}
 #section1 .s1 .left p{line-height: 35px; color: #333;}
-#section1 .s1 .right{width: 45%;}
-#section1 .s1 .right img{width: 100%; position: relative;}
-#section1 .s1 .right img::after{
+#section1 .s1 .right{
+  width: 45%; max-width: 605px;
+  position: relative;
+}
+#section1 .s1 .right::after{
   content: "";
   background-image: url(../images/section2_mainimg_circle_word.png);
-  width: 100%; height: 100%;
-  position: absolute; left: 0; top: 0;
+  width: 70%; height: 93%;
+  position: absolute; left: 10px; top: 10px;
   background-repeat: no-repeat;
+  background-size: contain;
+}
+#section1 .s1 .right img:nth-child(1){width: 100%;}
+#section1 .s1 .right img:nth-child(2){
+  position: absolute;
+  width: 70%;
+  top: 35%; right: 0;
+  transform: translateY(-35%);
+  z-index: 1;
+}
+
+
+/* section2 시작 */
+
+
+/* section3 시작 */
+.wrap{width: 100%; display: flex; justify-content: center;}
+.wrap>div{}
+.wrap .left{
+  position: relative;
+  width: 50%; height: 100vh;
+}
+.wrap .left p, .wrap .left h1{
+  position: absolute;
+}
+.wrap .left p.l_bg img{
+  width: 100%; object-fit: cover;
+  min-height: 100vh;
+}
+.wrap .left h1{
+  top: 8%;
+  font-family: Delicate;
+  font-weight: normal;
+  font-size: 80px; width: 100%;
+  text-align: center;
+  color: #222;
+}
+.wrap .left p.mainImg{
+  text-align: center;
+  top: 23%; left: 50%;
+  transform: translateX(-50%);
+  width: 70%; max-width: 450px;
+  
+}
+.wrap .left p.mainImg img{
+   object-fit: cover;
+   width: 100%;
+}
+.wrap .left p.logo{
+  left: 0; bottom: 10%;
+}
+.wrap .left p.logo img{
+  width: 70%;
+}
+
+.wrap .right{
+  background-image: url(../images/section4-7_sub_bg_texture.jpg);
   background-size: cover;
-  z-index: 20;
+  width: 50%; height: 3000px;
 }
