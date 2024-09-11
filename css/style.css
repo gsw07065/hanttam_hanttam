@@ -15,6 +15,14 @@ a{text-decoration: none;}
   font-family: Delicate;
   src: url(../webfonts/Delicate\ Caligraphy\ Demo.woff) format("woff");
 }
+@font-face {
+  font-family: NanumSquareR;
+  src: url(../webfonts/NanumSquareR.otf) format("opentype");
+}
+@font-face {
+  font-family: NanumSquareB;
+  src: url(../webfonts/NanumSquareB.otf) format("opentype");
+}
 
 /* header 시작 */
 #header{
@@ -141,4 +149,39 @@ a{text-decoration: none;}
   background-image: url(../images/section4-7_sub_bg_texture.jpg);
   background-size: cover;
   width: 50%; height: 3000px;
+}
+.wrap .right > div{
+  display: flex;
+  margin: 70px auto;
+  justify-content: center; gap: 10%;
+  align-items: center;
+  width: 80%;
+}
+.wrap .right > div > p{
+  width: 48%; aspect-ratio: 1 / 1.2;
+  overflow: hidden;
+}
+.wrap .right > div.one p{border-radius: 0 50px 0 0;}
+.wrap .right > div p img{
+  object-fit: cover;
+}
+.wrap .right > div.one p img{
+  width: 220%;
+  object-position: -130px -270px;
+}
+.wrap .right > div .txt{
+  display: flex; flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+  color: #333;
+}
+.wrap .right > div .txt img{
+  width: 60%; margin: 0 auto;
+}
+.wrap .right > div .txt p:nth-of-type(1){
+  font-family: NanumSquareR;
+}
+.wrap .right > div .txt p:nth-of-type(2){
+  font-family: NanumSquareB;
+  font-size: 15px;
 }
