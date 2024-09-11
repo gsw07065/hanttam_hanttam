@@ -47,6 +47,7 @@ a{text-decoration: none;}
 
 
 /* section0 시작 */
+#section0{width: 100%; height: 100vh;}
 #section0 .slide{
   position: relative;
 }
@@ -70,6 +71,7 @@ a{text-decoration: none;}
   font-family: MaruBuri-L; text-align: center;
   background-image: url(../images/section2_bg_texture_2.jpg);
   overflow: hidden;
+  width: 100%; height: 100vh;
 }
 .fp-scroller{height: 100vh;}
 #section1 .s1{
@@ -103,23 +105,25 @@ a{text-decoration: none;}
 
 
 /* section2 시작 */
-
+#section2{width: 100%; height: 100vh;}
 
 /* section3 시작 */
-.wrap{width: 100%; display: flex; justify-content: center;}
-.wrap>div{}
-.wrap .left{
-  position: relative;
+#section3{height: 100%; position: relative;}
+.s3_wrap{
+  width: 100%; display: flex; justify-content: center;
+}
+.s3_wrap .left{
+  position: sticky; top: 0;
   width: 50%; height: 100vh;
 }
-.wrap .left p, .wrap .left h1{
+.s3_wrap .left p, .s3_wrap .left h1{
   position: absolute;
 }
-.wrap .left p.l_bg img{
+.s3_wrap .left p.l_bg img{
   width: 100%; object-fit: cover;
   min-height: 100vh;
 }
-.wrap .left h1{
+.s3_wrap .left h1{
   top: 8%;
   font-family: Delicate;
   font-weight: normal;
@@ -127,61 +131,110 @@ a{text-decoration: none;}
   text-align: center;
   color: #222;
 }
-.wrap .left p.mainImg{
+.s3_wrap .left p.mainImg{
   text-align: center;
   top: 23%; left: 50%;
   transform: translateX(-50%);
   width: 70%; max-width: 450px;
   
 }
-.wrap .left p.mainImg img{
+.s3_wrap .left p.mainImg img{
    object-fit: cover;
    width: 100%;
 }
-.wrap .left p.logo{
+.s3_wrap .left p.logo{
   left: 0; bottom: 10%;
 }
-.wrap .left p.logo img{
+.s3_wrap .left p.logo img{
   width: 70%;
 }
 
-.wrap .right{
+.s3_wrap .right{
   background-image: url(../images/section4-7_sub_bg_texture.jpg);
   background-size: cover;
-  width: 50%; height: 3000px;
+  width: 50%;
 }
-.wrap .right > div{
+.s3_wrap .right > div{
   display: flex;
   margin: 70px auto;
   justify-content: center; gap: 10%;
   align-items: center;
   width: 80%;
 }
-.wrap .right > div > p{
-  width: 48%; aspect-ratio: 1 / 1.2;
+.s3_wrap .right > div > p{
+  width: 48%; aspect-ratio: 1 / 1.15;
+  overflow: hidden; position: relative;
+}
+
+.s3_wrap .right > div.one > p{
+  border-radius: 0 30% 0 0;
+}
+.s3_wrap .right > div.two > p{
+  border-radius: 30% 0 0 0;
+}
+.s3_wrap .right > div.three{
+  flex-direction: column; align-items: start;
+}
+.s3_wrap .right > div.three .otherimg{
+  display: flex; justify-content: space-between;
+  gap: 10%;
+}
+.s3_wrap .right > div.three .otherimg p:nth-child(1){
+  border-radius: 0 30% 0 0;
+}
+.s3_wrap .right > div.three .otherimg p:nth-child(2){
+  border-radius: 50% 50% 0 0;
+}
+.s3_wrap .right > div p img{
+  width: 100%; height: 100%;
+  object-fit: cover; transition: .3s;
+}
+.s3_wrap .right > div > p:hover:after{
+  content: "";
+  position: absolute; left: 0; top: 0;
+  width: 100%; height: 100%;
+  background-color: #333; opacity: .3;
+}
+.s3_wrap .right > div.three .otherimg p{
+  position: relative;
+  width: 48%; aspect-ratio: 1 / 1.15;
   overflow: hidden;
 }
-.wrap .right > div.one p{border-radius: 0 50px 0 0;}
-.wrap .right > div p img{
-  object-fit: cover;
+.s3_wrap .right > div.three .otherimg p:hover:after{
+  content: "";
+  position: absolute; left: 0; top: 0;
+  width: 100%; height: 100%;
+  background-color: #333; opacity: .3;
 }
-.wrap .right > div.one p img{
-  width: 220%;
-  object-position: -130px -270px;
+.s3_wrap .right > div  p:hover img{
+  transform: scale(1.1);
 }
-.wrap .right > div .txt{
+.s3_wrap .right > div .txt{
   display: flex; flex-direction: column;
   justify-content: center;
   gap: 20px;
   color: #333;
 }
-.wrap .right > div .txt img{
+.s3_wrap .right > div .txt img{
   width: 60%; margin: 0 auto;
 }
-.wrap .right > div .txt p:nth-of-type(1){
+.s3_wrap .right > div .txt p:nth-of-type(1){
   font-family: NanumSquareR;
 }
-.wrap .right > div .txt p:nth-of-type(2){
+.s3_wrap .right > div .txt p:nth-of-type(2){
   font-family: NanumSquareB;
   font-size: 15px;
+}
+.s3_wrap .right .three h3{
+  font-family: Delicate;
+  font-weight: normal; font-size: 55px;
+  color: #6F8B31;
+  margin-bottom: 30px;
+}
+.s3_wrap .right .three h3 span{position: relative;}
+.s3_wrap .right .three h3 span::after{
+  content: "";
+  background-image: url(../images/section4_textdeco_othercolor.png);
+  position: absolute; left: 10px; top: -5px;
+  width: 26px; height: 28px;
 }
