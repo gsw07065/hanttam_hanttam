@@ -267,7 +267,7 @@ a{text-decoration: none;}
   color: #fff; text-align: center;
   position: relative; z-index: 1;
   font-family: MaruBuri-EL;
-  font-size: 30px;
+  font-size: 30px; letter-spacing: -1px;
 }
 #section7 .con a span{
   text-decoration: underline;
@@ -279,7 +279,7 @@ a{text-decoration: none;}
 #section7 .con img{
   position: absolute; left: 50%;top: 50%;
   transform: translate(-50%, -50%);
-  width: 100%;
+  width: 120%;
 }
 #section7 > p {
   position: absolute; left: 0; bottom: -50px;
@@ -290,6 +290,15 @@ a{text-decoration: none;}
 
 /* footer 시작 */
 #footer{
-  width: 100%; height: 250px;
+  width: 100%;
   background-color: #F2EFE4;
+  display: flex; justify-content: space-between;
+  align-items: flex-end;
+}
+#footer ul{padding: 50px; box-sizing: border-box;}
+#footer ul li{
+  display: flex; gap: 30px;
+  line-height: 40px;
+  font-family: NanumSquareR;
+  color: #333;
 }
