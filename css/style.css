@@ -146,9 +146,10 @@ a{text-decoration: none;}
 }
 .lb_wrap .left p.logo{
   left: 0; bottom: 10%;
+  width: 100%;
 }
 .lb_wrap .left p.logo img{
-  width: 70%;
+  width: 65%;
 }
 
 .lb_wrap .right{
@@ -163,15 +164,20 @@ a{text-decoration: none;}
   align-items: center;
   width: 80%;
 }
-.lb_wrap .right > div > p{
+.lb_wrap .right > div a{
+  display: block;
   width: 48%; aspect-ratio: 1 / 1.15;
+}
+.lb_wrap .right > div a p{
+  width: 100%; height: 100%;
   overflow: hidden; position: relative;
 }
 
-.lb_wrap .right > div.one > p{
+
+.lb_wrap .right > div.one a p{
   border-radius: 0 30% 0 0;
 }
-.lb_wrap .right > div.two > p{
+.lb_wrap .right > div.two a p{
   border-radius: 30% 0 0 0;
 }
 .lb_wrap .right > div.three{
@@ -191,7 +197,7 @@ a{text-decoration: none;}
   width: 100%; height: 100%;
   object-fit: cover; transition: .3s;
 }
-.lb_wrap .right > div > p:hover:after{
+.lb_wrap .right > div a p:hover:after{
   content: "";
   position: absolute; left: 0; top: 0;
   width: 100%; height: 100%;
@@ -199,7 +205,7 @@ a{text-decoration: none;}
 }
 .lb_wrap .right > div.three .otherimg p{
   position: relative;
-  width: 48%; aspect-ratio: 1 / 1.15;
+  width: 100%; height: 100%;
   overflow: hidden;
 }
 .lb_wrap .right > div.three .otherimg p:hover:after{
@@ -208,7 +214,7 @@ a{text-decoration: none;}
   width: 100%; height: 100%;
   background-color: #333; opacity: .3;
 }
-.lb_wrap .right > div  p:hover img{
+.lb_wrap .right > div p:hover img{
   transform: scale(1.1);
 }
 .lb_wrap .right > div .txt{
@@ -243,6 +249,15 @@ a{text-decoration: none;}
 .reverse{flex-direction: row-reverse;}
 
 /* section4 시작 */
+.lb_wrap.s4 .left p.logo{
+  text-align: right;
+}
+.lb_wrap.s4 .right .three h3{
+  color: #D1A931;
+}
+.lb_wrap.s4 .right .three h3 span::after{
+  background-image: url(../images/section5_textdeco_othercolor.png);
+}
 /* section5 시작 */
 /* section6 시작 */
 
