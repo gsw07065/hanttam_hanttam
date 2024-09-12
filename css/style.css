@@ -105,25 +105,27 @@ a{text-decoration: none;}
 
 
 /* section2 시작 */
-#section2{width: 100%; height: 100vh;}
+#section2{width: 100%; height: 100%;}
+
 
 /* section3 시작 */
 #section3{height: 100%; position: relative;}
-.s3_wrap{
+.lb_wrap{
   width: 100%; display: flex; justify-content: center;
 }
-.s3_wrap .left{
+.lb_wrap .left{
   position: sticky; top: 0;
   width: 50%; height: 100vh;
+  overflow: hidden;
 }
-.s3_wrap .left p, .s3_wrap .left h1{
+.lb_wrap .left p, .lb_wrap .left h1{
   position: absolute;
 }
-.s3_wrap .left p.l_bg img{
+.lb_wrap .left p.l_bg img{
   width: 100%; object-fit: cover;
   min-height: 100vh;
 }
-.s3_wrap .left h1{
+.lb_wrap .left h1{
   top: 8%;
   font-family: Delicate;
   font-weight: normal;
@@ -131,110 +133,163 @@ a{text-decoration: none;}
   text-align: center;
   color: #222;
 }
-.s3_wrap .left p.mainImg{
+.lb_wrap .left p.mainImg{
   text-align: center;
   top: 23%; left: 50%;
   transform: translateX(-50%);
   width: 70%; max-width: 450px;
   
 }
-.s3_wrap .left p.mainImg img{
+.lb_wrap .left p.mainImg img{
    object-fit: cover;
    width: 100%;
 }
-.s3_wrap .left p.logo{
+.lb_wrap .left p.logo{
   left: 0; bottom: 10%;
 }
-.s3_wrap .left p.logo img{
+.lb_wrap .left p.logo img{
   width: 70%;
 }
 
-.s3_wrap .right{
+.lb_wrap .right{
   background-image: url(../images/section4-7_sub_bg_texture.jpg);
   background-size: cover;
   width: 50%;
 }
-.s3_wrap .right > div{
+.lb_wrap .right > div{
   display: flex;
   margin: 70px auto;
   justify-content: center; gap: 10%;
   align-items: center;
   width: 80%;
 }
-.s3_wrap .right > div > p{
+.lb_wrap .right > div > p{
   width: 48%; aspect-ratio: 1 / 1.15;
   overflow: hidden; position: relative;
 }
 
-.s3_wrap .right > div.one > p{
+.lb_wrap .right > div.one > p{
   border-radius: 0 30% 0 0;
 }
-.s3_wrap .right > div.two > p{
+.lb_wrap .right > div.two > p{
   border-radius: 30% 0 0 0;
 }
-.s3_wrap .right > div.three{
+.lb_wrap .right > div.three{
   flex-direction: column; align-items: start;
 }
-.s3_wrap .right > div.three .otherimg{
+.lb_wrap .right > div.three .otherimg{
   display: flex; justify-content: space-between;
   gap: 10%;
 }
-.s3_wrap .right > div.three .otherimg p:nth-child(1){
+.lb_wrap .right > div.three .otherimg p:nth-child(1){
   border-radius: 0 30% 0 0;
 }
-.s3_wrap .right > div.three .otherimg p:nth-child(2){
+.lb_wrap .right > div.three .otherimg p:nth-child(2){
   border-radius: 50% 50% 0 0;
 }
-.s3_wrap .right > div p img{
+.lb_wrap .right > div p img{
   width: 100%; height: 100%;
   object-fit: cover; transition: .3s;
 }
-.s3_wrap .right > div > p:hover:after{
+.lb_wrap .right > div > p:hover:after{
   content: "";
   position: absolute; left: 0; top: 0;
   width: 100%; height: 100%;
   background-color: #333; opacity: .3;
 }
-.s3_wrap .right > div.three .otherimg p{
+.lb_wrap .right > div.three .otherimg p{
   position: relative;
   width: 48%; aspect-ratio: 1 / 1.15;
   overflow: hidden;
 }
-.s3_wrap .right > div.three .otherimg p:hover:after{
+.lb_wrap .right > div.three .otherimg p:hover:after{
   content: "";
   position: absolute; left: 0; top: 0;
   width: 100%; height: 100%;
   background-color: #333; opacity: .3;
 }
-.s3_wrap .right > div  p:hover img{
+.lb_wrap .right > div  p:hover img{
   transform: scale(1.1);
 }
-.s3_wrap .right > div .txt{
+.lb_wrap .right > div .txt{
   display: flex; flex-direction: column;
   justify-content: center;
   gap: 20px;
   color: #333;
 }
-.s3_wrap .right > div .txt img{
+.lb_wrap .right > div .txt img{
   width: 60%; margin: 0 auto;
 }
-.s3_wrap .right > div .txt p:nth-of-type(1){
+.lb_wrap .right > div .txt p:nth-of-type(1){
   font-family: NanumSquareR;
 }
-.s3_wrap .right > div .txt p:nth-of-type(2){
+.lb_wrap .right > div .txt p:nth-of-type(2){
   font-family: NanumSquareB;
   font-size: 15px;
 }
-.s3_wrap .right .three h3{
+.lb_wrap .right .three h3{
   font-family: Delicate;
   font-weight: normal; font-size: 55px;
   color: #6F8B31;
   margin-bottom: 30px;
 }
-.s3_wrap .right .three h3 span{position: relative;}
-.s3_wrap .right .three h3 span::after{
+.lb_wrap .right .three h3 span{position: relative;}
+.lb_wrap .right .three h3 span::after{
   content: "";
   background-image: url(../images/section4_textdeco_othercolor.png);
   position: absolute; left: 10px; top: -5px;
   width: 26px; height: 28px;
+}
+.reverse{flex-direction: row-reverse;}
+
+/* section4 시작 */
+/* section5 시작 */
+/* section6 시작 */
+
+
+/* section7 시작 */
+#section7{
+  width: 100%; height: 100vh;
+  position: relative;
+}
+#section7 .s7_bg{
+  width: 100%; height: 100%;
+  background-image: url(../images/section8_bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex; justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-position: center;
+}
+#section7 .con{position: relative;}
+#section7 .con a{
+  color: #fff; text-align: center;
+  position: relative; z-index: 1;
+  font-family: MaruBuri-EL;
+  font-size: 30px;
+}
+#section7 .con a span{
+  text-decoration: underline;
+  text-underline-offset: 5px;
+  text-decoration-thickness: 1px;
+  font-size: 23px;
+  font-family: MaruBuri-L;
+}
+#section7 .con img{
+  position: absolute; left: 50%;top: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+}
+#section7 > p {
+  position: absolute; left: 0; bottom: -50px;
+  z-index: 99;
+  width: 55%; min-width: 400px;
+}
+#section7 > p img{width: 100%; height: 100%;}
+
+/* footer 시작 */
+#footer{
+  width: 100%; height: 250px;
+  background-color: #F2EFE4;
 }
