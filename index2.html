@@ -6,6 +6,7 @@
 	<title>hanttam hanttam2</title>
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="css/aos.css">
 </head>
 <body>
 
@@ -32,17 +33,17 @@
       <div class="swiper mySwiper">
         <div class="swiper-wrapper">
           <div class="swiper-slide">
-            <img src="images/mp-main_real_img1.jpg" alt="mp-main_real_img1">
+            <img class="m_bg" src="images/mp-main_real_img1.jpg" alt="mp-main_real_img1">
            <img src="images/mp-main_bg_gra.png" alt="mp-main_bg_gra">
            <img src="images/mp-main_bg_logo1.png" alt="mp-main_bg_logo1">
           </div>
           <div class="swiper-slide">
-            <img src="images/mp-main_real_img2.jpg" alt="mp-main_real_img2">
+            <img class="m_bg" src="images/mp-main_real_img2.jpg" alt="mp-main_real_img2">
            <img src="images/mp-main_bg_gra.png" alt="mp-main_bg_gra">
            <img src="images/mp-main_bg_logo2.png" alt="mp-main_bg_logo2">
           </div>
           <div class="swiper-slide">
-            <img src="images/mp-main_real_img3.jpg" alt="mp-main_real_img3">
+            <img class="m_bg" src="images/mp-main_real_img3.jpg" alt="mp-main_real_img3">
            <img src="images/mp-main_bg_gra.png" alt="mp-main_bg_gra">
            <img src="images/mp-main_bg_logo3.png" alt="mp-main_bg_logo3">
           </div>
@@ -63,72 +64,70 @@
             우리 브랜드는 일상의 옷장을 재해석합니다.
           </p>
         </div>
-        <div class="right">
+        <div data-aos="fade-up" class="right">
           <img src="images/section2_mainimg.png" alt="section2_mainimg">
-          <img src="images/section2_logo.png" alt="section2_logo">
+          <img data-aos="fade-up" data-aos-delay="1200" src="images/section2_logo.png" alt="section2_logo">
         </div>
       </div>
     </div>
 
     <div class="section" id="section2">
+      <!-- 0912_영풍문고 참고해서 변경예정 -->
       <h1>Best items<span></span></h1>
-      <ul class="con">
-        <li>
-          <a href="#">
-            <p>
-              <img src="images/mp_best item1.jpg" alt="mp_best1">
-            </p>
-            <div class="txt">
-              <h4>[ 유 자 ] 저고리 - 레이스</h4>
-              <p>138,000원</p>
-            </div>
-          </a>
-        </li>
-        <li>
-          <a href="#">
-            <p>
-              <img src="images/mp_best item2.jfif" alt="mp_best2">
-            </p>
-            <div class="txt">
-              <h4>[ 꽃잎 무지기 ] - IVORY</h4>
-              <p>89,000원</p>
-            </div>
-          </a>
-        </li>
-        <li>
-          <a href="#">
-            <p>
-              <img src="images/mp_best item3.jpg" alt="mp_best3">
-            </p>
-            <div class="txt">
-              <h4>[ 오 월 ] 방령깃 저고리</h4>
-              <p>138,000원</p>
-            </div>
-          </a>
-        </li>
-        <li>
-          <a href="#">
-            <p>
-              <img src="images/mp_best item4.jpg" alt="mp_best4">
-            </p>
-            <div class="txt">
-              <h4>[ 만 덕 ] 저고리 - GREEN</h4>
+      <div class="swiper mySwiper2">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <a href="#">
+              <p><img src="images/mp_best item1.jpg" alt="mp_best1"></p>
+              <div class="txt">
+                <h4>[ 유 자 ] 저고리 - 레이스</h4>
+                <p>138,000원</p>
+              </div>
+            </a>
+          </div>
+          <div class="swiper-slide">
+            <a href="#">
+              <p><img src="images/mp_best item2.jfif" alt="mp_best2"></p>
+              <div class="txt">
+                <h4>[ 꽃잎 무지기 ] - IVORY</h4>
+                <p>89,000원</p>
+              </div>
+            </a>
+          </div>
+          <div class="swiper-slide">
+            <a href="#">
+              <p><img src="images/mp_best item3.jpg" alt="mp_best3"></p>
+              <div class="txt">
+                <h4>[ 오 월 ] 방령깃 저고리</h4>
+                <p>138,000원</p>
+              </div>
+            </a>
+          </div>
+          <div class="swiper-slide">
+            <a href="#">
+              <p><img src="images/mp_best item4.jpg" alt="mp_best4"></p>
+              <div class="txt">
+                <h4>[ 만 덕 ] 저고리 - GREEN</h4>
               <p>129,000원</p>
-            </div>
-          </a>
-        </li>
-        <li>
-          <a href="#">
-            <p>
-              <img src="images/mp_best item5.jfif" alt="mp_best5">
-            </p>
-            <div class="txt">
-              <h4>폴라 워머 니트 - 옥색</h4>
-              <p>129,000원</p>
-            </div>
-          </a>
-        </li>
-      </ul>
+              </div>
+            </a>
+          </div>
+          <div class="swiper-slide">
+            <a href="#">
+              <p><img src="images/mp_best item5.jfif" alt="mp_best5"></p>
+              <div class="txt">
+                <h4>폴라 워머 니트 - 옥색</h4>
+                <p>129,000원</p>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div id="btn">
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+        </div>
+        <div class="swiper-pagination"></div>
+      </div>
     </div>
 
     <div class="section" id="section3">
@@ -338,7 +337,11 @@
           <a href="#">2024 민화 series<br>
             <span>바로가기</span>
           </a>
-          <img src="images/section8_textdeco_circle.png" alt="section8_textdeco_circle">
+          <div data-aos="flip-left"
+          data-aos-easing="ease-out-cubic"
+          data-aos-duration="1200">
+            <img src="images/section8_textdeco_circle.png" alt="section8_textdeco_circle">
+          </div>
         </div>
       </div>
       <p><img src="images/section8-9_logo.png" alt=""></p>
@@ -385,21 +388,7 @@
 
     <!-- Swiper JS -->
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-
-  <!-- Initialize Swiper -->
-  <script>
-    var swiper = new Swiper(".mySwiper", {
-      loop:true,
-      speed:1000,
-      /* autoplay:{
-        delay:4000,
-      }, */
-      pagination: {
-        el: ".swiper-pagination",
-        dynamicBullets: true,
-        clickable: true,
-      },
-    });
-  </script>
+  <script src="js/aos.js"></script>
+  <script src="js/hanttam.js"></script>
 </body>
 </html>
