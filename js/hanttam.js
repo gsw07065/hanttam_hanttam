@@ -36,6 +36,14 @@ const slide = document.querySelectorAll(".swiper-slide");
         nextEl: ".swiper-button-next",
         prevEl: ".swiper-button-prev",
       },
+      /* on: {
+        slideChange:function(){
+          for(let j=0; j<5; j++){
+            slide[j].querySelector(".bestImg").classList.remove("on");
+          }
+          slide[this.realIndex].querySelector(".bestImg").classList.add("on");
+        }
+      } */
     });
 
     AOS.init({
