@@ -220,11 +220,11 @@ a{text-decoration: none;}
 .lb_wrap .right > div .txt{
   display: flex; flex-direction: column;
   justify-content: center;
-  gap: 20px;
+  gap: 15px;
   color: #333;
 }
 .lb_wrap .right > div .txt img{
-  width: 60%; margin: 0 auto;
+  width: 60%; margin: 0 auto 15px;
 }
 .lb_wrap .right > div .txt p:nth-of-type(1){
   font-family: NanumSquareR;
@@ -233,6 +233,7 @@ a{text-decoration: none;}
   font-family: NanumSquareB;
   font-size: 15px;
 }
+.lb_wrap .right .two .txt{align-items: flex-end;}
 .lb_wrap .right .three h3{
   font-family: Delicate;
   font-weight: normal; font-size: 55px;
@@ -248,9 +249,20 @@ a{text-decoration: none;}
 }
 .reverse{flex-direction: row-reverse;}
 
+
 /* section4 시작 */
 .lb_wrap.s4 .left p.logo{
   text-align: right;
+}
+.lb_wrap.s4 .right .two{position: relative;}
+.lb_wrap.s4 .right .two img.cirWord{
+  position: absolute; right: -50px; bottom: -60px;
+  width: 30%; object-fit: cover;
+  animation: cirWord 20s linear infinite;
+}
+@keyframes cirWord {
+  0%{transform: rotate(0);}
+  100%{transform: rotate(360deg);}
 }
 .lb_wrap.s4 .right .three h3{
   color: #D1A931;
@@ -271,13 +283,30 @@ a{text-decoration: none;}
 }
 
 /* section6 시작 */
+.lb_wrap.s6 .left h1{
+  color: #fff;
+}
+.lb_wrap.s6 .left p.logo{
+  text-align: right;
+}
+.lb_wrap.s6 .right .two{position: relative;}
+.lb_wrap.s6 .right .two img.cirWord{
+  position: absolute; right: -50px; bottom: -60px;
+  width: 30%; object-fit: cover;
+  animation: cirWord 20s linear infinite;
+}
 .lb_wrap.s6 .right > div.three .otherimg{
   flex-direction: column; gap: 60px; 
 }
 .lb_wrap.s6 .right > div.three .otherimg div{
   display: flex; gap: 60px;
 }
-
+.lb_wrap.s6 .right .three h3{
+  color: #A88934;
+}
+.lb_wrap.s6 .right .three h3 span::after{
+  background-image: url(../images/section7_textdeco_othercolor.png);
+}
 .lb_wrap.s6 .right > div.three .otherimg div:nth-child(2) a:nth-child(1) p{
   border-radius: 30% 0 0 0;
 }
@@ -338,11 +367,26 @@ width: 48%; aspect-ratio: 1 / 1.15;
   background-color: #F2EFE4;
   display: flex; justify-content: space-between;
   align-items: flex-end;
+  padding: 60px 40px 40px; box-sizing: border-box;
 }
-#footer ul{padding: 50px; box-sizing: border-box;}
+#footer ul{font-size: 15px;}
+#footer ul.right{
+  display: flex; flex-direction: column;
+  align-items: end;
+}
 #footer ul li{
   display: flex; gap: 30px;
-  line-height: 40px;
+  line-height: 35px;
   font-family: NanumSquareR;
   color: #333;
+}
+#footer p.line{position: relative;}
+#footer p.line::after{
+  content: "";
+  position: absolute;
+  right: -15px; top: 50%;
+  transform: translateY(-50%);
+  width: 1px; height: 12px;
+  background-color: #bbb;
+
 }
