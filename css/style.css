@@ -167,6 +167,7 @@ a{text-decoration: none;}
 .lb_wrap .right > div a{
   display: block;
   width: 48%; aspect-ratio: 1 / 1.15;
+  position: relative;
 }
 .lb_wrap .right > div a p{
   width: 100%; height: 100%;
@@ -197,12 +198,24 @@ a{text-decoration: none;}
   width: 100%; height: 100%;
   object-fit: cover; transition: .3s;
 }
-.lb_wrap .right > div a p:hover:after{
+.lb_wrap .right > div a:hover p:after{
   content: "";
   position: absolute; left: 0; top: 0;
   width: 100%; height: 100%;
   background-color: #333; opacity: .3;
 }
+.lb_wrap .right > div a h4{
+  color: #fff;
+  position: absolute; left: 50%; top: 50%;
+  transform: translate(-50%, -50%);
+  font-weight: normal; font-size: 20px;
+  opacity: 0; transition: opacity .5s;
+  font-family: MaruBuri-EL;
+}
+.lb_wrap .right > div a:hover h4{
+  opacity: 1;
+}
+.lb_wrap .right > div a h4
 .lb_wrap .right > div.three .otherimg p{
   position: relative;
   width: 100%; height: 100%;
@@ -214,7 +227,7 @@ a{text-decoration: none;}
   width: 100%; height: 100%;
   background-color: #333; opacity: .3;
 }
-.lb_wrap .right > div p:hover img{
+.lb_wrap .right > div a:hover p img{
   transform: scale(1.1);
 }
 .lb_wrap .right > div .txt{
