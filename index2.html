@@ -5,6 +5,7 @@
 	<meta charset="utf-8" />
 	<title>hanttam hanttam2</title>
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 </head>
 <body>
 
@@ -28,26 +29,25 @@
   
     <!-- 0905_03_코웨이 learn 참고해서 변경예정 -->
     <div class="section " id="section0">
-      <div class="slide" id="slide1">
-         <div class="intro">
-           <img src="images/mp-main_real_img1.jpg" alt="mp-main_real_img1">
+      <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <img src="images/mp-main_real_img1.jpg" alt="mp-main_real_img1">
            <img src="images/mp-main_bg_gra.png" alt="mp-main_bg_gra">
            <img src="images/mp-main_bg_logo1.png" alt="mp-main_bg_logo1">
-         </div>
-      </div>
-      <div class="slide" id="slide2">
-         <div class="intro">
-           <img src="images/mp-main_real_img2.jpg" alt="mp-main_real_img1">
+          </div>
+          <div class="swiper-slide">
+            <img src="images/mp-main_real_img2.jpg" alt="mp-main_real_img2">
            <img src="images/mp-main_bg_gra.png" alt="mp-main_bg_gra">
-           <img src="images/mp-main_bg_logo2.png" alt="mp-main_bg_logo1">
-         </div>
-      </div>
-      <div class="slide" id="slide3">
-         <div class="intro">
-           <img src="images/mp-main_real_img3.jpg" alt="mp-main_real_img1">
+           <img src="images/mp-main_bg_logo2.png" alt="mp-main_bg_logo2">
+          </div>
+          <div class="swiper-slide">
+            <img src="images/mp-main_real_img3.jpg" alt="mp-main_real_img3">
            <img src="images/mp-main_bg_gra.png" alt="mp-main_bg_gra">
-           <img src="images/mp-main_bg_logo3.png" alt="mp-main_bg_logo1">
-         </div>
+           <img src="images/mp-main_bg_logo3.png" alt="mp-main_bg_logo3">
+          </div>
+        </div>
+        <div class="swiper-pagination"></div>
       </div>
     </div>
 
@@ -382,5 +382,24 @@
         </li>
       </ul>
     </div>
+
+    <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+  <!-- Initialize Swiper -->
+  <script>
+    var swiper = new Swiper(".mySwiper", {
+      loop:true,
+      speed:1000,
+      /* autoplay:{
+        delay:4000,
+      }, */
+      pagination: {
+        el: ".swiper-pagination",
+        dynamicBullets: true,
+        clickable: true,
+      },
+    });
+  </script>
 </body>
 </html>
