@@ -33,7 +33,7 @@ a{text-decoration: none;}
   margin: 0 auto; box-sizing: border-box;
   height: 50px; width: 100%;
   position: fixed;
-  z-index:9;
+  z-index:99;
   text-align:center;
   padding: 20px 30px 0; box-sizing: border-box;
   top:0px;
@@ -42,6 +42,10 @@ a{text-decoration: none;}
 #header a{color: #fff;}
 #header .logo img{width:92%; min-width: 80px; vertical-align: middle;}
 #header ul{display: flex;}
+#header ul li a{transition: .3s;}
+#header ul li a:hover{
+color: #6F8B31; font-weight: bold;
+}
 #header ul.nav li a{margin: 0 60px;}
 #header ul.r_menu li a{margin: 0 20px;}
 
@@ -142,6 +146,8 @@ a{text-decoration: none;}
   background: url(../images/MP_section3_bg.jpg) center/cover no-repeat;
   display: flex; flex-direction: column;
   justify-content: space-between;
+  position: relative;
+  overflow-x: hidden;
 }
 #section2 > h1{
   margin: 0 auto;
@@ -163,7 +169,7 @@ a{text-decoration: none;}
   height: auto;
 }
 .mySwiper2 .swiper-slide{
-  width: 440px;
+  width: 460px;
   text-align: center;
   margin-bottom: 5%;
 }
@@ -172,9 +178,10 @@ a{text-decoration: none;}
   width: 100%; text-align: center;
 } */
 .mySwiper2 .swiper-slide a > p.bestImg{
-  width: 100%; aspect-ratio: 1 / 1.35;
+  width: 100%; aspect-ratio: 1 / 1.25;
   transform: scale(0.75);
   border-radius: 50% 50% 0 0; overflow: hidden;
+  transition: 1s;
   
 }
 .mySwiper2 .swiper-slide a > p.bestImg.on{
@@ -185,6 +192,31 @@ a{text-decoration: none;}
   width: 100%; height: 100%;
   object-fit: cover;
 }
+.mySwiper2 .swiper-slide .txt{
+  color: #fff;
+}
+.mySwiper2 .swiper-slide .txt h4{
+  font-family: NanumSquareR;
+  font-weight: normal;
+  margin-top: -30px;
+  
+}
+.mySwiper2 .swiper-slide .txt p{
+  font-family: NanumSquareB;
+  font-size: 15px;
+  margin-top: 15px;
+}
+#section2 .circleWord{
+  position: absolute;
+  right: 20px; top: -10%;
+  z-index: 9; opacity: .5;
+  animation: cirWord 35s linear infinite;
+}
+#section2 .circleWord img{
+  transform: scale(1.3);
+}
+
+
 
 /* section3 시작 */
 #section3{height: 100%; position: relative;}
@@ -234,10 +266,11 @@ a{text-decoration: none;}
   background-image: url(../images/section4-7_sub_bg_texture.jpg);
   background-size: cover;
   width: 50%;
+  padding: 50px 0;
 }
 .lb_wrap .right > div{
   display: flex;
-  margin: 70px auto;
+  margin: 80px auto;
   justify-content: space-between; gap: 10%;
   align-items: center;
   width: 80%;
@@ -426,7 +459,7 @@ width: 48%; aspect-ratio: 1 / 1.15;
   background-position: center;
 }
 #section7 .con{
-  position: relative; width: 20%;
+ /*  position: relative; */ width: 20%; height: 100%;
   display: flex; justify-content: center;
   align-items: center;
 }
@@ -448,12 +481,18 @@ width: 48%; aspect-ratio: 1 / 1.15;
   text-decoration-thickness: 2px;
 }
 #section7 .con div{
-  width: 100%; height: 100%; position: absolute;
+  width: 16%;  position: absolute;
+  transition: .8s;
 }
 #section7 .con img{
   width: 100%;
   position: absolute; left: 0;top: 50%;
   transform: translateY(-50%);
+  
+}
+#section7 .con a:hover ~ div{
+  transform:rotate(180deg);
+  
 }
 #section7 > p {
   position: absolute; left: 0; bottom: -50px;
@@ -490,5 +529,7 @@ width: 48%; aspect-ratio: 1 / 1.15;
   transform: translateY(-50%);
   width: 1px; height: 12px;
   background-color: #bbb;
-
+}
+#footer ul.right li p a:hover img{
+  opacity: .6;
 }
