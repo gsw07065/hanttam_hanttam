@@ -5,9 +5,9 @@ var swiper = new Swiper(".mySwiper", {
   effect:"fade",
   loop:true,
   speed:1500,
-  /* autoplay:{
+  autoplay:{
     delay:6000,
-  }, */
+  },
   pagination: {
     el: ".swiper-pagination",
     clickable: true,
@@ -26,8 +26,15 @@ var swiper = new Swiper(".mySwiper", {
 var swiper = new Swiper(".mySwiper2", {
   slidesPerView: "auto",
   spaceBetween: 118,
+  speed: 800,
   loop: true,
   centeredSlides: true,
+  effect:"coverflow",
+  coverflowEffect: {
+    slideShadows: false,
+    scale: 0.8,
+    rotate: 0,
+  },
   pagination: {
     el: ".swiper-pagination",
     clickable: true,
@@ -36,14 +43,9 @@ var swiper = new Swiper(".mySwiper2", {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",
   },
-    /* on: {
-    slideChange:function(){
-      for(let j=0; j<5; j++){
-        slide[j].querySelector("a .bestImg").classList.remove("on");
-      }
-      slide[this.realIndex].querySelector("a .bestImg").classList.add("on");
-    }
-  } */
+    on: {
+
+  }
 });
 
 AOS.init({
@@ -64,6 +66,7 @@ AOS.init({
 
   //jquery제이쿼리  풀페이지
 $('#fullpage').fullpage({
+    navigation:true,
     verticalCentered: true,
     scrollBar: true, // 기본 스크롤 사용
     normalScrollElements: '.scrollable-element',
@@ -101,6 +104,21 @@ $('#fullpage').fullpage({
       $(this).css({color: "#fff"});
     });
     $("#header .logo img").attr("src","images/logo_white.png");
-  }
+  };
 }
+});
+
+//top버튼 이동
+$(window).scroll(function() {
+  if ($(this).scrollTop() > 500) {
+  $('#MOVE_TOP_BTN').fadeIn();
+  } else {
+  $('#MOVE_TOP_BTN').fadeOut();
+  }
+});
+$("#MOVE_TOP_BTN").click(function() {
+$('html, body').animate({
+scrollTop : 0
+}, 400);
+return false;
 });
