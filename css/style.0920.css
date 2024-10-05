@@ -39,13 +39,10 @@ a{text-decoration: none;}
   top:0px;
   background-image: linear-gradient(rgba(0, 0, 0, .3),rgba(0, 0, 0, .1),transparent);
 }
-#header a{color: #fff;}
+#header a{font-weight: bold;
+  transition: .3s;}
 #header .logo img{width:92%; min-width: 80px; vertical-align: middle;}
 #header ul{display: flex;}
-#header ul li a{transition: .3s;}
-#header ul li a:hover{
-color: #6F8B31; font-weight: bold;
-}
 #header ul.nav li a{margin: 0 60px;}
 #header ul.r_menu li a{margin: 0 20px;}
 
@@ -538,3 +535,7 @@ width: 48%; aspect-ratio: 1 / 1.15;
 #footer ul.right li p a:hover img{
   opacity: .6;
 }
+
+
+
+

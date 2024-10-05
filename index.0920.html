@@ -15,32 +15,14 @@
 		/* .sec4{height: auto !important;overflow-y: scroll !important;} */
 	</style>
 	<script>
-		$(document).ready(function() {
-			$('#fullpage').fullpage({
-					verticalCentered: true,
-					scrollBar: true, // 기본 스크롤 사용
-					normalScrollElements: '.scrollable-element',
-					afterLoad: function(origin, destination, direction) {
-        if ($(".sec4").hasClass("active")) { 
-					$.fn.fullpage.setScrollingSpeed(0); // 속도 조정
-						$.fn.fullpage.setAllowScrolling(false);
-						$("#section3,#section4,#section5,#section6").css("overflowY","scroll");
-          
-        } else {
-            // 나머지 페이지는 다시 FullPage.js 사용
-						$.fn.fullpage.setScrollingSpeed(700);
-						$.fn.fullpage.setAllowScrolling(true);
-        }
-    }
-			});
-    });
+		
 	</script>
 </head>
 <body>
 
   <div id="header">
     <div class="logo">
-      <img src="images/logo_white.png" alt="logo">
+      <a href="#"><img src="images/logo_white.png" alt="logo"></a>
     </div>
     <ul class="nav">
       <li><a href="#">about</a></li>
