@@ -175,6 +175,8 @@ a{text-decoration: none;}
   font-size: 100px; width: 80%;
   margin-top: 3%;
   color: #fff;
+  position: relative;
+  top: 40px;
 }
 #section2 h1 span{position: relative;}
 #section2 h1 span::after{
